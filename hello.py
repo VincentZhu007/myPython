@@ -271,3 +271,181 @@ print('----------------------------------------')
 
 # 4.7.1 默认参数值
 
+
+def ask_ok(prompt, retries=4, complaint='Yes or no, please!'):
+    while True:
+        ok = input(prompt)
+        if ok in ('y', 'ye', 'yes'):
+            return True
+        if ok in ('n', 'no', 'nop', 'nope'):
+            return False
+        retries = retries - 1
+        if retries < 0:
+            raise OSError('uncooperative user')
+        print(complaint)
+
+
+ok = ask_ok('Do you really want to quit?')
+print(ok, type(ok))
+
+ok = ask_ok('OK to overwrite the file?', 2)
+print(ok, type(ok))
+
+ok = ask_ok('Delete this file?', 2, 'Come on, only yes or no!')
+print(ok, type(ok))
+
+# 默认值在函数定义作用域被解析
+i = 5
+def f(arg=i):
+    print(arg)
+
+i = 6
+f()
+
+# 默认值在调用中可变
+
+
+def f2(a, L=[]): # 此处L是一个对象引用，内容可以发生改变
+    """参数L会在执行过程中被累积"""
+    L.append(a)
+    return L
+
+
+print(f2(1))
+print(f2(2))
+print(f2(3))
+
+
+# 默认值不在后续调用中累积
+
+
+def f3(a, L=None): # None是一个特殊的NoneType对象
+    if L is None:
+        L = []
+    L.append(a)
+    return L
+
+
+print(f3(1))
+print(f3(2))
+print(f3(3))
+
+# 4.7.2 关键词参数
+
+def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
+    print("-- This parrot wouldn't", action, end=' ')
+    print("if you put", voltage, "volts through it.")
+    print("-- Lovely plumage. the", type)
+    print("-- It's", state, "!")
+
+parrot(1000)
+parrot(voltage=1000)
+parrot(voltage=1000000, action='VOOOOOM')
+parrot(action='VOOOOOM', voltage=1000000)
+parrot('a million', 'bereft of life', 'jump')
+parrot('a thousand', state='pushing up the daisies')
+
+
+def cheeseshop(kind, *arguments, **keywords):
+    """
+    打印信息
+    :param kind:
+    :param arguments: 元组，包含所有没有出现在形式参数列表中的参数值
+    :param keywords: 字典，包含所有未出现的关键字参数
+    :return:
+    """
+    print("-- DO you have any", kind, "?")
+    print("-- I'm sorry, we're all out of", kind)
+    for arg in arguments:
+        print(arg)
+    print("-" * 40)
+    keys = sorted(keywords.keys()) # 若不排序，打印顺序未定义
+    for kw in keys:
+        print(kw, ":", keywords[kw])
+
+
+cheeseshop("Limburger", "It's very runny, sir.",
+           "It's really very. VERY runny. sir.",
+           shopkeeper="Michael Palin",
+           client="John Cleese",
+           sketch="Cheese Shop Sketch")
+
+# 4.7.3 可变参数列表
+
+
+def write_multiple_items(file, separator, *args):
+    """
+    将多项内容写到文件
+    :param file: 文件名
+    :param separator: 分隔符
+    :param args: 可变参数，写入的内容
+    :return:
+    """
+    file.write(separator.join(args))
+
+
+def concat(*args, sep='/'):
+    return sep.join(args)
+
+
+it_a = concat('earth', 'mars', 'venus')
+print(it_a, type(it_a))
+
+it_b = concat('earth', 'mars', 'venus', sep='.')
+print(it_b, type(it_b))
+
+
+# 4.7.4 参数列表的拆分
+lst_x = list(range(3, 6))
+print(lst_x, type(lst_x))
+
+args = [3, 6]
+lst_y = list(range(*args))
+print(lst_y, type(lst_y))
+
+
+# 4.7.5 Lambda形式：短小的匿名函数
+
+
+def make_incrementor(n):
+    """参考C中宏定义"""
+    return lambda x: x + n # 返回一个函数，类型为class function
+
+
+f = make_incrementor(42)
+print(f, type(f))
+ff = f(1)
+print(ff, type(ff))
+
+
+pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
+pairs.sort(key=lambda pair: pair[1]) # 作为小函数传参
+print(pairs, type(pairs))
+
+
+# 4.7.6 文档字符串
+
+def my_f():
+    """Do nothing, but document it.
+
+    No, really, it doesn't do anything.
+    :return: None
+    """
+    pass
+
+
+print(my_f.__doc__)
+
+# 4.7.7 函数注解
+
+
+def my_ff(ham: 42, eggs: int = 'spam') -> "Nothing to see here":
+    print("Annotations:", my_ff.__annotations__)
+    print("Arguments:", ham, eggs)
+
+
+my_ff('wonderful')
+
+# 5 数据结构
+print('========================================')
+
