@@ -449,3 +449,141 @@ my_ff('wonderful')
 # 5 数据结构
 print('========================================')
 
+# 列表对象方法
+lst_aa = [1]
+lst_aa.append(2)
+lst_aa[len(lst_aa):] = [3]
+print(lst_aa, type(lst_aa))
+
+lst_aa.extend([-1, -2])
+print(lst_aa, type(lst_aa))
+
+lst_aa.insert(0, 4)
+lst_aa.insert(len(lst_aa), 5)
+print(lst_aa, type(lst_aa))
+
+lst_aa.remove(5)
+print(lst_aa, type(lst_aa))
+
+tail_aa = lst_aa.pop()
+print(tail_aa)
+print(lst_aa, type(lst_aa))
+
+ind_aa = lst_aa.index(1)
+print(ind_aa)
+
+lst_aa.append(1)
+cnt_aa = lst_aa.count(1)
+print(cnt_aa)
+
+lst_aa.sort()
+print(lst_aa, type(lst_aa))
+
+lst_aa.reverse()
+print(lst_aa, type(lst_aa), id(lst_aa))
+
+lst_bb = lst_aa
+print(lst_bb, type(lst_bb), id(lst_bb))
+
+lst_cc = lst_aa.copy()
+print(lst_cc, type(lst_cc), id(lst_cc))
+
+# 5.1.3 列表推导式
+
+lst_dd = list(map(lambda x: x**2, range(10)))
+print(lst_dd, type(lst_dd))
+
+lst_ee = [x**2 for x in range(10)]
+print(lst_ee, type(lst_ee))
+
+lst_ff = [(x, y) for x in [1,2,3] for y in [3, 1, 4] if x != y]
+print(lst_ff, type(lst_ff))
+
+# 5.3 元组和序列
+print('----------------------------------------')
+
+
+def myprint(*objs, prompt: str = ''):
+    """Print object details."""
+    for obj in objs:
+        if prompt:
+            print(prompt, end='\t')
+        print("value =", obj, "type =", type(obj), "id =", id(obj))
+
+
+tup_a = 12345, 54321, 'hello!'
+myprint(tup_a)
+
+
+tup_empty = ()
+tup_one = (1,)
+not_tup_one = (1)
+myprint(tup_empty, tup_one, not_tup_one)
+
+ele_x, ele_y, ele_z =tup_a
+myprint(ele_x, ele_y, ele_z, prompt='elements')
+
+
+# 5.4 集合
+print('----------------------------------------')
+
+basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+myprint(basket)
+
+set_a = set('abracadabra')
+set_b = set('alacazam')
+myprint(set_a, set_b, set_a - set_b, set_a | set_b, set_a & set_b, set_a ^ set_b)
+
+# 5.5 字典
+print('----------------------------------------')
+
+tel = {'jack': 4098, 'sape': 4139}
+myprint(tel, prompt='字典')
+tel['guido'] = 4127
+myprint(tel, prompt='字典')
+del tel['sape']
+myprint(tel, prompt='字典')
+tel['irv'] = 4127
+myprint(list(tel.keys()))
+myprint(sorted(tel.keys()))
+myprint('guido' in tel)
+
+dict_a = dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+myprint(dict_a)
+
+dict_b = {x: x**2 for x in (2, 4, 6)}
+myprint(dict_b)
+
+dict_c = dict(sape=4139, guido=4127, jack=4098)
+myprint(dict_c)
+
+# 5.5 循环技巧
+print('----------------------------------------')
+
+knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+myprint(knights)
+
+for k,v in knights.items():
+    print(k, ":", v)
+
+
+for i, v in enumerate(['tic', 'tac', 'toe']):
+    print(i, v)
+
+
+questions = ['name', 'quest', 'favorate color']
+answers = ['lancelot', 'the holy grail', 'blue']
+for q, a in zip(questions, answers):
+    print('What is your {0}? It is {1}.'.format(q, a))
+
+# 5.7 深入条件控制
+print('----------------------------------------')
+
+str1, str2, str3 = '', 'Trondhim', 'Hammer Dance'
+str4 = str1 or str2 or str3 # 并不是True
+myprint(str4)
+
+
+# 5.8 比较序列和其它类型
+print('----------------------------------------')
+

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab290ab7-7aca-49c1-81a8-9bef45e8bae8" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="ab290ab7-7aca-49c1-81a8-9bef45e8bae8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/myPython.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myPython.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,22 +20,21 @@
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1VEbAbCMoci4c9iznu10U2LLq4R" />
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="ProjectId" id="1VEbAbCMoci4c9iznu10U2LLq4R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="hello" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -61,6 +65,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -74,13 +90,56 @@
       <workItem from="1576821062014" duration="1329000" />
       <workItem from="1576823914628" duration="160000" />
       <workItem from="1576824307493" duration="9436000" />
+      <workItem from="1576844443562" duration="9310000" />
     </task>
+    <task id="LOCAL-00001" summary="update to chapter 4">
+      <created>1576848638965</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576848638965</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update to chapter 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="update to chapter 4" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="628" y="64" key="CommitChangelistDialog2" timestamp="1576848638800">
+      <screen x="65" y="23" width="1375" height="877" />
+    </state>
+    <state x="628" y="64" key="CommitChangelistDialog2/65.23.1375.877@65.23.1375.877" timestamp="1576848638800" />
+    <state width="646" height="264" key="GridCell.Tab.0.bottom" timestamp="1576935536409">
+      <screen x="65" y="23" width="1375" height="877" />
+    </state>
+    <state width="646" height="264" key="GridCell.Tab.0.bottom/65.23.1375.877@65.23.1375.877" timestamp="1576935536409" />
+    <state width="646" height="264" key="GridCell.Tab.0.center" timestamp="1576935536409">
+      <screen x="65" y="23" width="1375" height="877" />
+    </state>
+    <state width="646" height="264" key="GridCell.Tab.0.center/65.23.1375.877@65.23.1375.877" timestamp="1576935536409" />
+    <state width="646" height="264" key="GridCell.Tab.0.left" timestamp="1576935536408">
+      <screen x="65" y="23" width="1375" height="877" />
+    </state>
+    <state width="646" height="264" key="GridCell.Tab.0.left/65.23.1375.877@65.23.1375.877" timestamp="1576935536408" />
+    <state width="646" height="264" key="GridCell.Tab.0.right" timestamp="1576935536409">
+      <screen x="65" y="23" width="1375" height="877" />
+    </state>
+    <state width="646" height="264" key="GridCell.Tab.0.right/65.23.1375.877@65.23.1375.877" timestamp="1576935536409" />
+    <state x="261" y="100" key="SettingsEditor" timestamp="1576844485395">
+      <screen x="65" y="23" width="1375" height="877" />
+    </state>
+    <state x="261" y="100" key="SettingsEditor/65.23.1375.877@65.23.1375.877" timestamp="1576844485395" />
+    <state x="431" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1576844445979">
+      <screen x="65" y="23" width="1375" height="877" />
+    </state>
+    <state x="431" y="294" key="com.intellij.ide.util.TipDialog/65.23.1375.877@65.23.1375.877" timestamp="1576844445979" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/myPython$hello.coverage" NAME="hello Coverage Results" MODIFIED="1576833474892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/myPython$hello.coverage" NAME="hello Coverage Results" MODIFIED="1576935536401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
